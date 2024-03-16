@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Video Editor</title>
+	<link rel="stylesheet" href="videoappstyle.css">
+</head>
+
+<body>
+	<header>
+		<h2>My Video Editor</h2>
+	</header>
+	<main>
+		<section id="upload-section">
+			<label for="videoUpload" class="upload-label">Choose a video:</label>
+			<input type="file" id="videoUpload" accept="video/*">
+		</section>
+		<section id="video-section">
+			<video id="videoPlayer" controls></video>
+		</section>
+		<section id="controls-section">
+
+			<label for="startTime">Start Time:</label>
+			<input type="text" id="startTime" placeholder="00:00:00">
+			<label for="endTime">End Time:</label>
+			<input type="text" id="endTime" placeholder="00:00:00">
+			<button id="cutBtn">Cut Video</button>
+			<button id="trimBtn">Trim Video</button>
+			<!-- Add other editing buttons as needed -->
+			<button id="exportBtn" style="display: none;">Export Video</button>
+			<button id="downloadBtn" style="display: none;">Download Edited Video</button>
+		</section>
+	
+	</main>
+	<footer>
+		<p>&copy; 2024 My Video Editor</p>
+	</footer>
+	<script src="videoappaction.js"></script>
+</body>
+
+</html>
