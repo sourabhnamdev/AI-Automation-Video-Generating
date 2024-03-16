@@ -19,7 +19,7 @@ Overview
 The YouTube Auto-Upload Bot is a Python script utilizing Selenium that automates the process of uploading videos to YouTube. This documentation provides step-by-step instructions on how to set up and use the bot.
 
 Prerequisites
-Python: Ensure Python is installed on your system. You can download it from python.org.
+Python: Ensure Python is installed on your system. You can download it from store with specific version. 
 
 Selenium: Install Selenium using pip:
 
