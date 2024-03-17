@@ -10,8 +10,8 @@ from moviepy.editor import AudioFileClip
 width, height = 1200, 2000
 
 # Path to your folder containing images
-image_folder = 'G:\\Automation_Video_Project\\youtube-autoupload-bot-master\\DataLibrary\\Images\\Hero Heroin'
-audio_path = 'G:\\Automation_Video_Project\\youtube-autoupload-bot-master\\DataLibrary\\audio\\your_song.mp3'
+image_folder = 'C:\\Automate\\AI-Automation-Video-Generating\\youtube-autoupload-python\\DataLibrary\\Images\\Hero Heroin'
+audio_path = 'C:\\Automate\\AI-Automation-Video-Generating\\youtube-autoupload-python\\DataLibrary\\audio\\Instrumental\\your_song.mp3'
 
 # Get all image files from the folder
 all_images = [f for f in os.listdir(image_folder) if f.endswith(('.png', '.jpg', '.jpeg'))]
@@ -58,7 +58,7 @@ audio_clip = AudioFileClip(audio_path).subclip(0, total_video_duration)  # Use o
 final_clip = final_clip.set_audio(audio_clip)
 
 # Output file will be in .mp4 format
-final_output_path = 'G:\\Automation_Video_Project\\youtube-autoupload-bot-master\\Generated Videos\\5_images_video.mp4'
+final_output_path = 'C:\\Automate\\AI-Automation-Video-Generating\\youtube-autoupload-python\\Generated Videos\\Love\\5_images_video.mp4'
 
 # Write the result to a new file
 final_clip.write_videofile(final_output_path, codec="libx264", audio_codec="aac", fps=24)
