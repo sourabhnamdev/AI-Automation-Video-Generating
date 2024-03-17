@@ -3,10 +3,13 @@ import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+# options.add_experimental_option('excludeSwitches', ['enable-logging'])
+
+
 options = webdriver.ChromeOptions()
-chrome_driver_path = "G:\\Automation_Video_Project\\youtube-autoupload-bot-master\\chromedriver.exe"
+chrome_driver_path = "C:\\Automate\\AI-Automation-Video-Generating\\youtube-autoupload-python\\chromedriver.exe"
 options.add_argument("--log-level=3")
-options.add_argument("user-data-dir=C:\\Users\\dell\\AppData\\Local\\Google\\Chrome Beta\\User Data\\")
+options.add_argument("user-data-dir=C:\\Users\\lenovo\\AppData\\Local\\Google\\Chrome Beta\\User Data\\")
 options.binary_location = "C:\\Program Files\\Google\\Chrome Beta\\Application\\chrome.exe"
 
 print("\033[1;31;40m : Welcome In Auto Uploading Video... ")
@@ -36,9 +39,17 @@ for i, filename in enumerate(os.listdir(dir_path), start=1):
 
         # Set the video description
         description = "Your detailed video description goes here."  # Replace with your desired description
-        # Locate the description div based on your provided structure
-        description_div = bot.find_element(By.XPATH, '//*[@id="textbox"][contains(@class, "ytcp-social-suggestions-textbox")]')
+        description_div = bot.find_element(By.XPATH, '//div[@id="textbox" and @aria-label="Tell viewers about your video (type @ to mention a channel)"]')
         bot.execute_script("arguments[0].textContent = arguments[1];", description_div, description)
+ 
+        # "Show More" button ko locate karna
+        show_more_button = bot.find_element(By.XPATH, '//ytcp-button[@id="toggle-button"]//div[contains(text(),"Show more")]')
+
+        # Button par click karna
+        show_more_button.click()
+
+        # Thoda wait karna taaki page ke elements load ho jaye
+        time.sleep(2)  # Adjust this delay according to your network speed or page response time
 
         # Set the video tags
         tags = "tag1, tag2, tag3"  # Replace with your desired tags, separated by commas

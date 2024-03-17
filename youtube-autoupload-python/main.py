@@ -4,10 +4,10 @@ from selenium.webdriver.common.by import By
 
 options = webdriver.ChromeOptions()
 # chrome_driver_path = "C:\\Users\\dell\\Downloads\\chromedriver-win64 (1)\\chromedriver-win64\\chromedriver.exe"
-chrome_driver_path = "G:\\Automation_Video_Project\\youtube-autoupload-bot-master\\chromedriver.exe"
+chrome_driver_path = "C:\\Automate\\AI-Automation-Video-Generating\\youtube-autoupload-python\\chromedriver.exe"
 # options.add_experimental_option('excludeSwitches', ['enable-logging'])
 options.add_argument("--log-level=3")
-options.add_argument("user-data-dir=C:\\Users\\dell\\AppData\\Local\\Google\\Chrome Beta\\User Data\\")
+options.add_argument("user-data-dir=C:\\Users\\lenovo\\AppData\\Local\\Google\\Chrome Beta\\User Data\\")
 options.binary_location = "C:\\Program Files\\Google\\Chrome Beta\\Application\\chrome.exe"
 print("\033[1;31;40m : Welcome In Auto Uploading Video... ")
 time.sleep(5)
